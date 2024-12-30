@@ -18,15 +18,15 @@ El proyecto se desarrollará considerando las siguientes partes clave:
 
 1. Análisis del Problema y Contexto:
    
-   *Identificación de las necesidades específicas de las comunidades vulnerables a inundaciones y deslizamientos.
+   * Identificación de las necesidades específicas de las comunidades vulnerables a inundaciones y deslizamientos.
    
-   *Definición de los datos críticos que el sistema debe monitorear, como niveles de agua y capturas visuales.
+   * Definición de los datos críticos que el sistema debe monitorear, como niveles de agua y capturas visuales.
 
 3. Diseño e Implementación del Prototipo:
    
-   -**Hardware:** Configuración del ESP32 CAM para capturas de imágenes y del sensor ultrasónico para medición de niveles de agua.
+   * **Hardware:** Configuración del ESP32 CAM para capturas de imágenes y del sensor ultrasónico para medición de niveles de agua.
    
-   -**Software:** Desarrollo del código que integre ambos dispositivos y permita transmitir datos a una plataforma web.
+   * **Software:** Desarrollo del código que integre ambos dispositivos y permita transmitir datos a una plataforma web.
 
 5. Plataforma de Visualización de Datos:
    
