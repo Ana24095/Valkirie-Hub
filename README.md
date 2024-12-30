@@ -13,21 +13,30 @@ AquaNova es un sistema inteligente de monitoreo preventivo diseñado para comuni
 Este prototipo busca empoderar a las comunidades y autoridades locales con información accesible y oportuna, permitiendo una gestión efectiva de los recursos hídricos y una respuesta rápida ante emergencias. Al integrar tecnología innovadora con un enfoque sostenible, Aquanova contribuye al ODS 13: Acción por el Clima y al ODS 6: Agua Limpia y Saneamiento.
 
 ***DESARROLLO DEL PROYECTO***
+
 El proyecto se desarrollará considerando las siguientes partes clave:
 
 1. Análisis del Problema y Contexto:
-   -Identificación de las necesidades específicas de las comunidades vulnerables a inundaciones y deslizamientos.
-   -Definición de los datos críticos que el sistema debe monitorear, como niveles de agua y capturas visuales.
+   
+   *Identificación de las necesidades específicas de las comunidades vulnerables a inundaciones y deslizamientos.
+   
+   *Definición de los datos críticos que el sistema debe monitorear, como niveles de agua y capturas visuales.
 
-2. Diseño e Implementación del Prototipo:
+3. Diseño e Implementación del Prototipo:
+   
    -**Hardware:** Configuración del ESP32 CAM para capturas de imágenes y del sensor ultrasónico para medición de niveles de agua.
+   
    -**Software:** Desarrollo del código que integre ambos dispositivos y permita transmitir datos a una plataforma web.
 
-3. Plataforma de Visualización de Datos:
-   -Creación de una interfaz web basada en Bootstrap para mostrar en tiempo real los datos recopilados.
-   -Implementación de alertas visuales y gráficas interactivas que permitan interpretar fácilmente los niveles de riesgo.
+5. Plataforma de Visualización de Datos:
+   
+   * Creación de una interfaz web basada en Bootstrap para mostrar en tiempo real los datos recopilados.
+   
+   * Implementación de alertas visuales y gráficas interactivas que permitan interpretar fácilmente los niveles de riesgo.
 
-4. Pruebas de Funcionamiento:
-   -Simulaciones en un entorno controlado para validar la precisión de los sensores y el flujo de datos.
-   -Ajustes iterativos basados en los resultados obtenidos en cada etapa de prueba.
+7. Pruebas de Funcionamiento:
+   
+   * Simulaciones en un entorno controlado para validar la precisión de los sensores y el flujo de datos.
+   
+   * Ajustes iterativos basados en los resultados obtenidos en cada etapa de prueba.
 
