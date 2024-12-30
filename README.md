@@ -3,4 +3,5 @@ Valkirie Hub es el cruce perfecto entre visión y tecnología, un equipo que tra
 
 Nuestro actual proyecto aborda el monitoreo preventivo de cuencas hídricas, un esfuerzo innovador para anticipar y gestionar desastres naturales de manera eficaz. Con creatividad constante y un enfoque colaborativo, Valkirie Hub redefine los límites de lo posible, trazando un camino hacia la sostenibilidad y la innovación.
 
-![Pixel Perfect](https://github.com/user-attachments/assets/8f563dfb-7b00-4dbb-9084-67dfd0eb04d1)
+![image](https://github.com/user-attachments/assets/56e1a71c-c5c1-4d74-913e-c3a80a519cbe)
+
