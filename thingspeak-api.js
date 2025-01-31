@@ -1,11 +1,11 @@
-
 //conexión de thingSpeak con la app 
-const channelId = '4ACUG07EDP8NQRKK'; // ESTE ID SOLO SE UTILIZA SI SU THINGSPREAK ES PRIVADO Y EL ID ES DIFERENTE PARA CADA PROYECTO 
+const channelId = '2822645'; // ESTE ID SOLO SE UTILIZA SI SU THINGSPREAK ES PRIVADO Y EL ID ES DIFERENTE PARA CADA PROYECTO 
+const apiKey = '4ACUG07EDP8NQRKK';
 
 async function fetchThingSpeakData() {
     try {
         console.log('Intentando obtener datos de ThingSpeak...');
-        const url = `https://thingspeak.mathworks.com/channels/2822645/private_show`;  //URL DE LA PÁGINA DE THINGSPEAK DONDE CREARON LA CONEXIÓN CON SUS SENSORES
+        const url = `https://api.thingspeak.com/channels/${channelId}/feeds.json?api_key=${apiKey}&results=20`;  //URL DE LA PÁGINA DE THINGSPEAK DONDE CREARON LA CONEXIÓN CON SUS SENSORES
         console.log('URL de la petición:', url);
 
         const response = await fetch(url);
