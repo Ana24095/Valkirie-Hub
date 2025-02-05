@@ -154,14 +154,34 @@
 
     <!-- -----------------------Chart ----------------------- -->
 
-    <div style="max-width: 1200px; margin: 0 auto; padding: 20px; margin-left: 190px;">
+    <div class="left-menu">
+        <div class="menubar-content">
+            <nav class="animated bounceInDown">
+                <ul id="sidebar">
+                    <li><a href="#"><i class="fas fa-home"></i>Dashboard</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chart-simple"></i>Analysis</a></li>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i>Localization</a></li>
+                    <li><a href="#"><i class="fa-solid fa-bell"></i>Alerts</a></li>
+                    <li><a href="#"><i class="fa-solid fa-file-lines"></i>Reports</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content-wrapper">
         <h1>Dashboard</h1>
         
-        <!-- Mensajes de estado y error -->
         <div id="error-message"></div>
         <div class="status">
             Estado: <span id="connection-status">Conectando...</span><br>
             Última actualización: <span id="lastUpdate">Ninguna</span>
+        </div>
+
+        <div class="chart-container">
+            <h2>PH</h2>
+            <canvas id="phChart"></canvas>
         </div>
 
         <div class="chart-container">
@@ -170,62 +190,26 @@
         </div>
 
         <div class="chart-container">
-            <h2>Humedad del Entorno</h2>
-            <canvas id="humedadChart"></canvas>
+            <h2>Distancia</h2>
+            <canvas id="distanciaChart"></canvas>
         </div>
 
         <div class="chart-container">
-            <h2>Movimiento Detectado</h2>
-            <canvas id="movimientoChart"></canvas>
+            <h2>Turbidez</h2>
+            <canvas id="turbidezChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Caudal</h2>
+            <canvas id="caudalChart"></canvas>
         </div>
     </div>
+</div>
 
-    <!-- RUTA DE LOS ARCHIVOS JS VERIFICAR QUE ESTEN CORRECTAMENTE -->
-    <script src="thingspeak-api.js"></script>
-    <script src="chart-manager.js"></script>
-    <script>
-        const updateInterval = 15000; // 15 segundos esto lo pueden editar segun el teimpo que ustedes quieren que se actualice 
-
-        // Función para mostrar errores
-        function showError(message) {
-            const errorDiv = document.getElementById('error-message');
-            errorDiv.textContent = message;
-            errorDiv.style.display = 'block';
-        }
-
-        // Función para actualizar el estado en los gráficos 
-        function updateStatus(status) {
-            document.getElementById('connection-status').textContent = status;
-        }
-
-        async function updateData() {
-            try {
-                updateStatus('Obteniendo datos...');
-                const data = await fetchThingSpeakData();
-                updateCharts(data);
-                const now = new Date().toLocaleString();
-                document.getElementById('lastUpdate').textContent = now;
-                updateStatus('Conectado');
-                
-                // Ocultar mensaje de error si existe
-                document.getElementById('error-message').style.display = 'none';
-            } catch (error) {
-                console.error('Error en updateData:', error);
-                updateStatus('Error de conexión');
-                showError(`Error al actualizar los datos: ${error.message}`);
-            }
-        }
-
-        // Verificar que todos los scripts se han cargado
-        window.addEventListener('load', function() {
-            console.log('Página cargada completamente');
-            updateData();
-            setInterval(updateData, updateInterval);
-        });
-    </script>
-
+<script src="chart-manager.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
+
 
 
